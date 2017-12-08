@@ -31,7 +31,18 @@ var server = http.createServer(function(request, response) {
 
 server.listen(8080);
 
-[[[[[  à suivre :>> https://openclassrooms.com/courses/des-applications-ultra-rapides-avec-node-js/les-evenements-18 ]]]]]
+
+var EventEmitter = require('events').EventEmitter;
+
+var jeu = new EventEmitter();
+
+jeu.on('Game Over', function(message) {
+  console.log(message);
+});
+
+jeu.emit('Game Over', 'Pouloulou est un chat.');
+
+////////// https://openclassrooms.com/courses/des-applications-ultra-rapides-avec-node-js/les-modules-node-js-et-npm //////////
 
 // var events = require('events');
 // var eventEmitter = new events.EventEmitter();
