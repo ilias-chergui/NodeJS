@@ -3,7 +3,7 @@ var sayHelloinEnglish = function() {
 }
 
 var sayHelloinSpanish = function() {
-  return "Hola";
+  return "Hola muchachos ";
 }
 
 module.exports.English = sayHelloinEnglish;
